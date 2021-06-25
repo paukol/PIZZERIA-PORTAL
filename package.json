@@ -63,6 +63,7 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
+    "eslint": "^7.29.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-watch": "^7.0.0",
     "husky": "^6.0.0",
