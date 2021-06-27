@@ -1,20 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './Waiter.module.scss';
 import {Link} from 'react-router-dom';
 
-const Waiter = props => {
+const Waiter = () => {
   return (
     <div className={styles.component}>
       <h2>Waiter view</h2>
-      <Link to={process.env.PUBLIC_URL + `/waiter/order/new`}>New Order</Link>
-      <Link to={process.env.PUBLIC_URL + `/tables/order/:id`}>Edit any order</Link>
+      <Link to={`${process.env.PUBLIC_URL}/waiter/order/new`} activeClassName='active' className={styles.link}>New Order</Link>
+      <Link to={`${process.env.PUBLIC_URL}/waiter/order/123abc`} activeClassName='active' className={styles.link}>Edit any order</Link>
     </div>
   );
 };
 
-Waiter.propTypes = {
-  children: PropTypes.any,
-};
 
 export default Waiter;

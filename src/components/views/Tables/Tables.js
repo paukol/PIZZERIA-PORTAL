@@ -1,22 +1,16 @@
+
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Tables.scss';
-import {Link} from 'react-router-dom';
+import styles from '../Tables/Tables.module.scss';
+import { Link } from 'react-router-dom';
 
-const Tables = props => {
-  return (
-    <div className={styles.component}>
-      <h2>Tables view</h2>
-      <Link to={process.env.PUBLIC_URL + `/tables/booking/new`}>Book table</Link>
-      <Link to={process.env.PUBLIC_URL + `/tables/booking/:id`}>Edit any booking</Link>
-      <Link to={process.env.PUBLIC_URL + `/tables/events/new`}>Add event</Link>
-      <Link to={process.env.PUBLIC_URL + `/tables/events/:id`}>Edit any event</Link>
-    </div>
-  );
-};
-
-Tables.propTypes = {
-  children: PropTypes.any,
-};
+const Tables = () => (
+  <div className={styles.component}>
+    <h2>Tables view</h2> 
+    <Link to={`${process.env.PUBLIC_URL}/tables/booking/new`} activeClassName='active' className={styles.link}>New booking</Link>
+    <Link to={`${process.env.PUBLIC_URL}/tables/booking/123abc`} activeClassName='active' className={styles.link}>Edit any Booking</Link>
+    <Link to={`${process.env.PUBLIC_URL}/tables/events/new`} activeClassName='active' className={styles.link}>New event</Link>
+    <Link to={`${process.env.PUBLIC_URL}/tables/events/123abc`} activeClassName='active' className={styles.link}>Edit any Events</Link>  
+  </div>
+);
 
 export default Tables;
