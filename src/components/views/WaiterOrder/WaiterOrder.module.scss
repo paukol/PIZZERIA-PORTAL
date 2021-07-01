@@ -1,5 +1,12 @@
+
 @import '../../../styles/settings.scss';
 
 .component {
   padding: $base-size;
+  margin-top: 40px;
+}
+
+.accordionDetails {
+  display: flex;
+  justify-content: space-between;
 }
