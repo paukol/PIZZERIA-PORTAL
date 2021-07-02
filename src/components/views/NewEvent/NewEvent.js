@@ -1,8 +1,5 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
-import { useParams } from 'react-router-dom';
 import styles from './NewEvent.module.scss';
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -23,19 +20,20 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 
+
 const NewEvent = () => {
   const [selectedDate, setSelectedDate] = React.useState(new Date(Date.now()));
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
-  const { id } = useParams();
+
   return (
     <Container className={styles.component} component="main" maxWidth="lg">
       <CssBaseline />
       <div className={styles.paper}>
         <Grid container justify="center" spacing={1}>
           <Grid item>
-            <Typography component="h1" variant="h5">
+            <Typography component="h1" variant="h4">
               New Event
             </Typography>
           </Grid>

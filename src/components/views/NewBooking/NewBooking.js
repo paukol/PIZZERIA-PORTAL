@@ -1,7 +1,6 @@
+
 import React from 'react';
-//import PropTypes from 'prop-types';
 import styles from './NewBooking.module.scss';
-import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -10,7 +9,6 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { Link } from 'react-router-dom';
-import EventAvailableSharpIcon from '@material-ui/icons/EventAvailableSharp';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 import {
@@ -23,23 +21,21 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
 
+
+
 const NewBooking = () => {
   const [selectedDate, setSelectedDate] = React.useState(new Date(Date.now()));
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+
   return (
     <Container className={styles.component} component="main" maxWidth="lg">
       <CssBaseline />
       <div className={styles.paper}>
         <Grid container justify="center" spacing={1}>
           <Grid item>
-            <Avatar className={styles.avatar}>
-              <EventAvailableSharpIcon />
-            </Avatar>
-          </Grid>
-          <Grid item>
-            <Typography component="h1" variant="h5">
+            <Typography component="h1" variant="h4">
               New Booking
             </Typography>
           </Grid>
@@ -102,16 +98,12 @@ const NewBooking = () => {
               />
             </Grid>
             <Grid item xs={1} zeroMinWidth>
-              <FormControl
-                id="table"
-                variant="outlined"
-                maxWidth
-                margin="normal"
-              >
-                <InputLabel id="table" variant="outlined" mediumWidth>
-                  People
-                </InputLabel>
-                <Select labelId="table">
+              <FormControl className={styles.formControl} margin="normal">
+                <InputLabel id="demo-simple-select-label">Table</InputLabel>
+                <Select
+                  labelId="table"
+                  id="demo-simple-select"
+                >  
                   <MenuItem value={1}>1</MenuItem>
                   <MenuItem value={2}>2</MenuItem>
                   <MenuItem value={3}>3</MenuItem>
@@ -121,11 +113,9 @@ const NewBooking = () => {
               </FormControl>
             </Grid>
             <Grid item xs={1} zeroMinWidth>
-              <FormControl id="table" variant="outlined" margin="normal">
-                <InputLabel id="table" variant="outlined">
-                  Table
-                </InputLabel>
-                <Select labelId="table">
+              <FormControl className={styles.formControl} margin="normal">
+                <InputLabel>People</InputLabel>
+                <Select labelId="people">  
                   <MenuItem value={1}>1</MenuItem>
                   <MenuItem value={2}>2</MenuItem>
                   <MenuItem value={3}>3</MenuItem>

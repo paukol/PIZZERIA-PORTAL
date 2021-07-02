@@ -15,27 +15,31 @@ import Typography from '@material-ui/core/Typography';
 const demoList = [
   {
     table: '1',
+    name: 'Paula',
     time: '12:00',
     people: '2',
     id: '1',
   },
   {
     table: '2',
+    name: 'Paula',
     time: '16:00',
     people: '2',
     id: '9',
   },
   {
     table: '1',
+    name: 'Paula',
     time: '19:00',
     people: '3',
-    id: '1',
+    id: '3',
   },
   {
     table: '2',
+    name: 'Paula',
     time: '21:30',
     people: '4',
-    id: '9',
+    id: '4',
   },
 ];
 const Homepage = () => (

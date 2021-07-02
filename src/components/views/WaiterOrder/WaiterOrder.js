@@ -5,7 +5,6 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -36,10 +35,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
   },
+  
 }));
 
 
-const OrderInfo = () => {
+const WaiterOrder = () => {
   const classes = useStyles();
   return (
     <Paper className={styles.component} elevation={9}>
@@ -140,6 +140,6 @@ const OrderInfo = () => {
   );
 };
 
-export default OrderInfo;
+export default WaiterOrder;
 
 

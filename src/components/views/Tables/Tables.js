@@ -1,6 +1,5 @@
 
 import React from 'react';
-//import PropTypes from 'prop-types';
 import styles from './Tables.module.scss';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -87,7 +86,7 @@ const renderActions = (status) => {
           to={`${process.env.PUBLIC_URL}/tables/booking/new`}
         >
           {' '}
-          Booking possible
+          NEW BOOKING
         </Button>
       );
     case 'booked':

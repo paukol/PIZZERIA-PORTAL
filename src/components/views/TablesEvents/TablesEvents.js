@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './TablesEvents.module.scss';
-import { useParams } from 'react-router-dom';
 import Table from '@material-ui/core/Table';
+import { useParams } from 'react-router-dom';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import RestaurantIcon from '@material-ui/icons/Restaurant';
+
 
 const demoEvent = {
   date: '2021-07-27',
@@ -24,13 +24,11 @@ const demoEvent = {
 
 const TablesEvents = () => {
   const { id } = useParams();
-  
   return (
     <Paper className={styles.component} elevation={9}>
       <Grid container justify="space-around">
         <Grid item xs={3}>
           <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter`}>
-            <RestaurantIcon />
           </Button>
         </Grid>
         <Grid item xs={9}>
