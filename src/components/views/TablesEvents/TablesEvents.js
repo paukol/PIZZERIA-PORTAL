@@ -21,8 +21,6 @@ const demoEvent = {
 };
 
 
-
-
 const TablesEvents = () => {
   const { id } = useParams();
   return (

@@ -8,6 +8,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
+
 const Login = () => (
   <Paper className={styles.component} elevation={9}> 
     <Typography 
@@ -34,7 +35,10 @@ const Login = () => (
         id="password" 
         autoComplete="current-password" 
       />
-      <FormControlLabel control={<Checkbox value="remember" color="primary" />} label="Remember me" />
+      <FormControlLabel 
+        control={<Checkbox value="remember" color="primary" />} 
+        label="Remember me" 
+      />
       <Button 
         type="submit" 
         variant="contained" 

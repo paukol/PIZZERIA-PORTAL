@@ -12,7 +12,6 @@ import Select from '@material-ui/core/Select';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import Checkbox from '@material-ui/core/Checkbox';
-import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
@@ -26,21 +25,8 @@ const demoMenu = [
   { id: '4', name: 'salad', option: ['egg', 'tomato', 'cheese'] },
 ];
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-    padding: '20px',
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-  },
-  
-}));
-
 
 const WaiterOrder = () => {
-  const classes = useStyles();
   return (
     <Paper className={styles.component} elevation={9}>
       <Grid container justify="space-around">
@@ -76,7 +62,7 @@ const WaiterOrder = () => {
           </FormControl>
         </Grid>
       </Grid>
-      <Grid className={classes.root}>
+      <Grid>
         {demoMenu.map((dish) => (
           <Accordion key={dish.id}>
             <AccordionSummary
@@ -84,7 +70,7 @@ const WaiterOrder = () => {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography className={classes.heading}>{dish.name}</Typography>
+              <Typography>{dish.name}</Typography>
             </AccordionSummary>
             <AccordionDetails className={styles.accordionDetails}>
               <FormControl size="large" margin="normal" component="fieldset">

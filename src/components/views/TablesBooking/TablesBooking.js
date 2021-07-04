@@ -21,8 +21,6 @@ const demoBooking = {
   
 };
 
-
-
 const TablesBooking = () => {
   const { id } = useParams();
   return (

@@ -73,7 +73,8 @@ const Homepage = () => (
               <Button
                 className={styles.booked}
                 component={Link}
-                to={`${process.env.PUBLIC_URL}/tables/booking/${demoList.id}`}>
+                to={`${process.env.PUBLIC_URL}/tables/booking/${demoList.id}`}
+              >
                 SEE DETAILS
               </Button>
             </TableCell>

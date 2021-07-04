@@ -100,7 +100,10 @@ const NewBooking = () => {
                 />
               </Grid>
               <Grid item xs={1} zeroMinWidth>
-                <FormControl className={styles.formControl} margin="normal">
+                <FormControl 
+                  className={styles.formControl} 
+                  margin="normal"
+                >
                   <InputLabel id="demo-simple-select-label">Table</InputLabel>
                   <Select
                     labelId="table"
@@ -115,7 +118,10 @@ const NewBooking = () => {
                 </FormControl>
               </Grid>
               <Grid item xs={1} zeroMinWidth>
-                <FormControl className={styles.formControl} margin="normal">
+                <FormControl 
+                  className={styles.formControl} 
+                  margin="normal"
+                >
                   <InputLabel>People</InputLabel>
                   <Select labelId="people">  
                     <MenuItem value={1}>1</MenuItem>

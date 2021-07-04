@@ -3,21 +3,5 @@
 .component {
   padding: $base-size;
 }
-.cell{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-.titleCell {
-margin-right: 5px;
-}
-.buttonCell {
-  margin: 5px;
-}
 
-.title {
-  margin-top: 10px;
-  font-size: 15px;
-}
