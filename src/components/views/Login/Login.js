@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
 const Login = () => (
-  <Paper className={styles.component}>
+  <Paper className={styles.component} elevation={9}> 
     <Typography 
       variant="h5" 
       component="h1"

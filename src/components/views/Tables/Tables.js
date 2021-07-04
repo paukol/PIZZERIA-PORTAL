@@ -180,7 +180,7 @@ const Tables = () => {
                 {row.hour}
               </TableCell>
               {row.tables.map((table) => (
-                <TableCell key={row.table} component="th" scope="row">
+                <TableCell key={table.id} component="th" scope="row">
                   {renderActions(table.status)}
                 </TableCell>
               ))}
